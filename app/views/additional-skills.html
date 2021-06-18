@@ -1,0 +1,81 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/url/of/previous/page">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+      <form class="form" action="/additional-skills-answers" method="post">
+
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="skills-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading id="additional-skills">
+                Please indicate any other object you juggle frequently?
+              </h1>
+            </legend>
+            <div id="skills-hint" class="govuk-hint">
+              We are interested in understanding your level of ability.
+            </div>
+
+            <div class="govuk-warning-text">
+              <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+              <strong class="govuk-warning-text__text">
+                <span class="govuk-warning-text__assistive">Warning</span>
+                You can be fined up to £1,000 if you do not report your correct skill level.
+              </strong>
+            </div>
+
+
+
+            <div class="govuk-checkboxes">
+
+
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="skills" name="skills" type="checkbox" value="Cutlery" aria-describedby="skills-item-hint">
+                <label class="govuk-label govuk-checkboxes__label" for="skills">
+                  Cutlery
+                </label>
+                <div id="skills-item-hint" class="govuk-hint govuk-checkboxes__hint">
+                  including Forks, Spoons and Knives                </div>
+              </div>
+
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="skills-2" name="skills" type="checkbox" value="Chainsaws">
+                <label class="govuk-label govuk-checkboxes__label" for="skills-2">
+                  Chainsaws
+                </label>
+
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="skills-3" name="skills" type="checkbox" value="Fire torches">
+                <label class="govuk-label govuk-checkboxes__label" for="skills-3">
+                 Fire torches
+                </label>
+              </div>
+            </div>
+
+          </fieldset>
+        </div>
+
+
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
